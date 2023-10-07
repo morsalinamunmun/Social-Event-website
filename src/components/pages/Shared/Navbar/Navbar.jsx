@@ -2,9 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
     const links = <>
-        <li><NavLink to='/' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-red-500 underline" : ""}>Home</NavLink></li>
-        <li><NavLink to='/services' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-red-500 underline" : ""}>Services</NavLink></li>
-        <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-red-500 underline" : ""}>Profile</NavLink></li>
+        <li><NavLink to='/' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Home</NavLink></li>
+        <li><NavLink to='/services' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Services</NavLink></li>
+        <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Profile</NavLink></li>
     </>
     return (
         <div className="navbar max-w-6xl mx-auto">
@@ -25,7 +25,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn">Login</Link>
+                    <Link className="py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
                  </div>
         </div>
     );
