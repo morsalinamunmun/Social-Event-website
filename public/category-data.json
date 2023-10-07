@@ -1,0 +1,56 @@
+[
+    {
+      "id": "1",
+      "category_name": "Weddings",
+      "color": "#FF6B6B",
+      "btn_color": "#F472B6",
+      "title": "A beautiful wedding ceremony and reception",
+      "image": "https://i.ibb.co/ZmSwNHS/wedding-decorations.jpg",
+      "price": "$15,000"
+    },
+    {
+      "id": "2",
+      "category_name": "Birthday Parties",
+      "color": "#FFD166",
+      "btn_color": "#60A5FA",
+      "title": "A fun and lively birthday celebration",
+      "image": "https://i.ibb.co/vwbRbFK/birthday.jpg",
+      "price": "$500"
+    },
+    {
+      "id": "3",
+      "category_name": "Anniversaries",
+      "color": "#06D6A0",
+      "btn_color": "#F472B6",
+      "title": "A romantic anniversary dinner for two",
+      "image": "https://i.ibb.co/HP4YvvG/anniverseries.jpg",
+      "price": "$200"
+    },
+    {
+      "id": "4",
+      "category_name": "Engagement Parties",
+      "color": "#ACDFF1",
+      "btn_color": "#6CB2E9",
+      "title": "A joyful celebration of love and commitment",
+      "image": "https://i.ibb.co/NLhT9VM/engagement.jpg",
+      "price": "$1,000"
+    },
+    {
+      "id": "5",
+      "category_name": "Retirement Parties",
+      "color": "#F0A500",
+      "btn_color": "#FEF08A",
+      "title": "A retirement send-off for a valued colleague",
+      "image": "https://i.ibb.co/MM49tg6/retairent.jpg",
+      "price": "$300"
+    },
+    {
+      "id": "6",
+      "category_name": "Baby Shower",
+      "color": "#7209B7",
+      "btn_color": "#D8B4FE",
+      "title": "A baby shower to welcome a new bundle of joy",
+      "image": "https://i.ibb.co/F8JdgSY/baby.jpg",
+      "price": "$150"
+    }
+  ]

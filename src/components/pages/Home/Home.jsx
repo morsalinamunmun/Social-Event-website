@@ -1,11 +1,13 @@
 import Banner from "../Shared/Banner/Banner";
 import Navbar from "../Shared/Navbar/Navbar";
+import Cards from "./Cards";
 
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <div className="bg-[#FBCFE850]"><Navbar></Navbar></div>
             <Banner></Banner>
+            <Cards></Cards>
         </div>
     );
 };
