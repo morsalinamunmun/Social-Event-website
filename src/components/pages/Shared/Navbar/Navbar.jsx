@@ -7,7 +7,8 @@ const Navbar = () => {
         <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Profile</NavLink></li>
     </>
     return (
-        <div className="navbar max-w-6xl mx-auto">
+        <div className="bg-[#FBCFE850]">
+            <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -25,8 +26,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
+                    <Link to='/login' className="py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
                  </div>
+            </div>
         </div>
     );
 };

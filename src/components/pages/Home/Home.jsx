@@ -6,7 +6,7 @@ import Cards from "./Cards";
 const Home = () => {
     return (
         <div>
-            <div className="bg-[#FBCFE850]"><Navbar></Navbar></div>
+            <Navbar></Navbar>
             <Banner></Banner>
             <Cards></Cards>
             <Footer></Footer>
