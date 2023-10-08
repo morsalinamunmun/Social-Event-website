@@ -1,6 +1,7 @@
-
+import {PropTypes} from 'prop-types'
+import { Link } from 'react-router-dom';
 const Card = ({category}) => {
-    const {id, image, title, color, btn_color, category_name} = category;
+    const {id, image, title, btn_color, category_name} = category;
     return (
         <div className="card card-compact  bg-base-100 ">
         <div className=""><img className="h-52 w-full" src={image} alt="Shoes" /></div>
@@ -8,11 +9,13 @@ const Card = ({category}) => {
           <h2 className="card-title">{category_name}</h2>
           <p>{title}</p>
           <div className="card-actions justify-end">
-            <button className="btn text-white" style={{backgroundColor: btn_color}}>Details</button>
+            <button className="btn text-white" style={{backgroundColor: btn_color}}><Link to={`/details/${id}`}>Details</Link></button>
           </div>
         </div>
       </div>
     );
 };
-
+Card.propTypes={
+    category: PropTypes.node
+}
 export default Card;

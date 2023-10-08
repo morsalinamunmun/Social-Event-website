@@ -1,11 +1,19 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../../Providers/AuthProviders";
 
 const Navbar = () => {
+    const {user, logOut} = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Home</NavLink></li>
         <li><NavLink to='/services' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Services</NavLink></li>
         <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Profile</NavLink></li>
     </>
+    const handleLogOut = ()=>{
+        logOut()
+        .then(()=> console.log('logout'))
+        .catch(error=> console.error(error))
+    }
     return (
         <div className="bg-[#FBCFE850]">
             <div className="navbar max-w-6xl mx-auto">
@@ -26,7 +34,12 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login' className="py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
+                    {
+                        user ? 
+                        <>
+                          <a onClick={handleLogOut} className="py-2 px-3 text-white font-semibold rounded bg-pink-500 cursor-pointer">Log Out</a>
+                        </> : <Link to='/login' className=" cursor-pointer py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
+                    }
                  </div>
             </div>
         </div>
