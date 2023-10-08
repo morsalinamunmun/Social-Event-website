@@ -6,6 +6,7 @@ const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
     const links = <>
         <li><NavLink to='/' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Home</NavLink></li>
+        <li><NavLink to='/about' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>About Us</NavLink></li>
         <li><NavLink to='/services' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Services</NavLink></li>
         <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Profile</NavLink></li>
     </>
@@ -26,7 +27,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                <a className="normal-case text-xl">Service Event</a>
+                <a className="normal-case text-xl greatVibes">Social Event</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex gap-5 menu-horizontal px-1">

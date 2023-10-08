@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        greatVibes: "'Great Vibes', cursive"
+      }
+    },
   },
   plugins: [require("daisyui")],
 }

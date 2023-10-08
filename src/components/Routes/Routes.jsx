@@ -26,6 +26,10 @@ const router = createBrowserRouter([
           loader: ()=> fetch('../category-data.json')
         },
         {
+          path: '/about',
+          element: 
+        }
+        {
           path: '/profile',
           element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
         },
