@@ -18,6 +18,7 @@
       "title": "A fun and lively birthday celebration",
       "image": "https://i.ibb.co/vwbRbFK/birthday.jpg",
       "price": "$500",
+      "image_template": "https://i.ibb.co/vwbRbFK/birthday.jpg",
       "description": "Bright and attractive birthday decoration items are essential for a birthday celebration with friends and family and for ringing in style in another year. Birthday decoration materials like birthday balloons, photo booth props, birthday banners, and blingy lights are some of the must-have birthday decoration items for the celebration."
     },
     {
@@ -28,6 +29,7 @@
       "title": "A romantic anniversary dinner for two",
       "image": "https://i.ibb.co/HP4YvvG/anniverseries.jpg",
       "price": "$200",
+      "image_template": "https://i.ibb.co/Z1GBG8b/enggage-template.jpg",
       "description": "Remember to consult with the couple to ensure that the decoration aligns with their tastes and preferences. Tailoring the decor to their unique love story will make the anniversary celebration even more special."
     },
     {
@@ -38,26 +40,29 @@
       "title": "A joyful celebration of love and commitment",
       "image": "https://i.ibb.co/NLhT9VM/engagement.jpg",
       "price": "$1,000",
+      "image_template": "https://i.ibb.co/4g6jpv3/Flower-Arrangements.jpg",
       "description": "We Offer a Wide Array Of Products Like Statues, Plaques & More For Home Décor. Get Deals and Low Prices On decoration party engagement At social event"
     },
     {
       "id": "5",
       "category_name": "Retirement Parties",
       "color": "#F0A500",
-      "btn_color": "#FEF08A",
+      "btn_color": "#EAB308",
       "title": "A retirement send-off for a valued colleague",
       "image": "https://i.ibb.co/MM49tg6/retairent.jpg",
       "price": "$300",
+      "image_template": "https://i.ibb.co/BrL4q0y/retairment-template.jpg",
       "description": "We Offer a Wide Array Of Products Like Statues, Plaques & More For Home Décor. Get Deals and Low Prices On retired decorations for party At Social event"
     },
     {
       "id": "6",
       "category_name": "Baby Shower",
       "color": "#7209B7",
-      "btn_color": "#D8B4FE",
+      "btn_color": "#A78BFA",
       "title": "A baby shower to welcome a new bundle of joy",
       "image": "https://i.ibb.co/F8JdgSY/baby.jpg",
       "price": "$150",
+      "image_template": "https://i.ibb.co/smD15jw/babby1.png",
       "description": "Chic Leaf Disposable Bamboo Plates (48-Pack), $35 Amazon For sturdy, match-all and practical plates for your guests to use during a baby shower, the Chic Leaf Disposable Bambo"
     }
   ]

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
@@ -6,7 +6,8 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
   const [error, setError] = useState('');
-  // const [success, setSuccess] = useState('')
+  const location = useLocation();
+  const navigate = useNavigate();
   const {createUser} = useContext(AuthContext);
   const handleRegister = e =>{
     e.preventDefault();
@@ -27,6 +28,7 @@ const Register = () => {
     .then(result=>{
       console.log(result.user);
       toast('Registered has been successfully');
+       navigate(location?.state? location.state: '/login')
     })
     .catch(error=> console.error(error));
   }

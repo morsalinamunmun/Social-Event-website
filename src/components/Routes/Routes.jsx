@@ -8,13 +8,13 @@ import Register from "../pages/Register/Register";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../pages/Profile/Profile";
-//import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
+import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
-      //errorElement: <ErrorPage></ErrorPage>,
+      errorElement: <ErrorPage></ErrorPage>,
       children:[
         {
           path: '/',
@@ -22,7 +22,7 @@ const router = createBrowserRouter([
         },
         {
           path: '/details/:id',
-          element: <CardDetails></CardDetails>,
+          element: <PrivateRoutes><CardDetails></CardDetails></PrivateRoutes>,
           loader: ()=> fetch('../category-data.json')
         },
         {

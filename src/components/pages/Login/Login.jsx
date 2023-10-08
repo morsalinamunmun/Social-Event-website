@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from "react";
@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
   const [loginError, setLoginError] = useState('');
+  const navigate = useNavigate();
     const { signIn, googleSignIn} = useContext(AuthContext);
     const handleLogin = e =>{
         e.preventDefault();
@@ -18,8 +19,7 @@ const Login = () => {
         signIn(email, password)
         .then(result=>{
           console.log(result.user);
-          //navigate after login
-          //navigate(location?.state? location.state: '/')
+          navigate(location?.state? location.state: '/')
           if(result.user.emailVerified){
              toast('Login has been successfully')
           }
