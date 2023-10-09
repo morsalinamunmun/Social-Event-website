@@ -4,9 +4,9 @@ import { Link, useLoaderData } from "react-router-dom";
 const Gallery = () => {
     const categories = useLoaderData();
     return (
-        <div className="max-w-6xl mx-auto py-20">
+        <div className="max-w-6xl mx-auto py-20 px-5">
             <h2 className="text-3xl font-bold text-center mb-10">Gallery Design</h2>
-           <div className="grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4">
+           <div className="grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4">
            {
                 categories.map(category=> 
                      <><div className="w-90 h-60">

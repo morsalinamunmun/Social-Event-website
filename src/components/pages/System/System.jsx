@@ -2,7 +2,7 @@ import { VscCheck } from "react-icons/vsc";
 const System = () => {
     return (
         <div className="py-20 ">
-            <div className="flex mx-[18%] gap-10">
+            <div className="flex flex-col md:flex-row mx-[18%] md:mx-[10%] lg:mx-[18%] gap-10">
                 <div className="bg-yellow-500 p-10">
                     <p className="text-xl">Minimum Services</p>
                     <h2 className="text-3xl font-semibold">50290</h2>

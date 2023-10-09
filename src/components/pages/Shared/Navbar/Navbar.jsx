@@ -4,6 +4,7 @@ import { AuthContext } from "../../../../Providers/AuthProviders";
 
 const Navbar = () => {
     const {user, logOut} = useContext(AuthContext);
+    console.log(user)
     const links = <>
         <li><NavLink to='/' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Home</NavLink></li>
         <li><NavLink to='/about' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>About Us</NavLink></li>
@@ -17,7 +18,8 @@ const Navbar = () => {
         .catch(error=> console.error(error))
     }
     return (
-        <div className="bg-[#FBCFE850]">
+        // fixed w-full text-white top-0 z-[1]
+        <div className="bg-[#FBCFE850] ">
             <div className="navbar max-w-6xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -39,7 +41,17 @@ const Navbar = () => {
                     {
                         user ? 
                         <>
-                          <a onClick={handleLogOut} className="py-2 px-3 text-white font-semibold rounded bg-pink-500 cursor-pointer">Log Out</a>
+                             <div className="dropdown dropdown-end">
+                                <label tabIndex={0} className="btn btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src={user.photoURL} alt="" />
+                                    </div>
+                                </label>
+                                <ul tabIndex={0} className="p-2 shadow menu menu-sm dropdown-content z-[1] bg-base-100 rounded-box w-36">
+                                    <li className="font-semibold text-center mb-2">{user.displayName}</li>
+                                    <li><a onClick={handleLogOut} className="py-2 px-3 text-white flex mx-auto text-center font-semibold rounded bg-pink-500 cursor-pointer">Log Out</a></li>
+                                </ul>
+                            </div>                       
                         </> : <Link to='/login' className=" cursor-pointer py-2 px-3 text-white font-semibold rounded bg-pink-500">Login</Link>
                     }
                  </div>

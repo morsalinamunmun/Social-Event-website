@@ -8,11 +8,12 @@ const Register = () => {
   const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
-  const {createUser} = useContext(AuthContext);
+  const {createUser, updateProfileData} = useContext(AuthContext);
   const handleRegister = e =>{
     e.preventDefault();
     const form = new FormData(e.currentTarget);
     const name = form.get('name');
+    const image_url = form.get('image_url')
     const email = form.get('email');
     const password = form.get('password');
     console.log(name, email, password)
@@ -32,6 +33,8 @@ const Register = () => {
     createUser(email, password)
     .then(result=>{
       console.log(result.user);
+      updateProfileData(name, image_url)
+      .then(res=> {console.log(res.user)})
        navigate(location?.state? location.state: '/login')
     })
     .catch(error=> console.error(error));
@@ -47,6 +50,12 @@ const Register = () => {
                               <span className="label-text">Name</span>
                         </label>
                         <input type="name" name="name" placeholder="User Name" className="input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                        <label className="label">
+                              <span className="label-text">Photo</span>
+                        </label>
+                        <input type="text" name="image_url" placeholder="Image url" className="input input-bordered" required />
                     </div>
                     <div className="form-control">
                         <label className="label">
