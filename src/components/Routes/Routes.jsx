@@ -10,6 +10,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../pages/Profile/Profile";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
 import About from "../pages/About/About";
+import Gallery from "../pages/Gallery/Gallery";
 
 const router = createBrowserRouter([
     {
@@ -34,6 +35,11 @@ const router = createBrowserRouter([
         {
           path: '/profile',
           element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
+        },
+        {
+          path: '/gallery',
+          element: <PrivateRoutes><Gallery></Gallery></PrivateRoutes>,
+          loader: ()=> fetch('category-data.json')
         },
         {
           path: '/login',

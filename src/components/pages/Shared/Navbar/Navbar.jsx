@@ -9,6 +9,7 @@ const Navbar = () => {
         <li><NavLink to='/about' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>About Us</NavLink></li>
         <li><NavLink to='/services' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Services</NavLink></li>
         <li><NavLink to='/profile' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Profile</NavLink></li>
+        <li><NavLink to='/gallery' className={({isActive, isPending})=> isPending ? "pending" : isActive ? "text-pink-500 underline" : ""}>Gallery</NavLink></li>
     </>
     const handleLogOut = ()=>{
         logOut()
