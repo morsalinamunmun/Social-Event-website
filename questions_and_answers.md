@@ -75,9 +75,9 @@ console.log(food);
 #### Answer: A: `['🍕', '🍫', '🥑', '🍔']`
 
 <i>Write your explanation here</i>
-create an object info with a property favoriteFood that is assigned the value of the first element of the food array, which is "🍕".
+create an object info with a property favoriteFood that is assigned the value of the first index[0] of the food array, which is "🍕".
 
-After that, you reassign the info.favoriteFood property to "🍝".
+After that, reassign the info.favoriteFood property to "🍝".
 
 However, this reassignment does not affect the food array in any way. The food array remains unchanged and still contains the elements ['🍕', '🍫', '🥑', '🍔'].
 </p>
@@ -104,7 +104,7 @@ console.log(sayHi());
 #### Answer: B: `Hi there, undefined`
 
 <i>Write your explanation here</i>
-When  call sayHi() without providing an argument, it still executes, but the name parameter inside the function receives no value, which results in name being undefined.
+When  call sayHi() without providing an argument, but the name parameter inside the function receives no value, so results in name being undefined.
 
 </p>
 </details>
@@ -135,7 +135,7 @@ console.log(count);
 <i>Write your explanation here</i>
 Here use the forEach method to iterate over each element in the nums array.
 
-In the callback function provided to forEach,  check if the num is truthy using the if (num) condition. In JavaScript, 0 is considered falsy, and all other numbers (including 1, 2, and 3) are considered truthy.
+In the callback function provided to forEach,  check if the num is truthy using the if (num) condition. In JavaScript, 0 is considered falsy,  all other numbers are  truthy.
 
 </p>
 </details>
