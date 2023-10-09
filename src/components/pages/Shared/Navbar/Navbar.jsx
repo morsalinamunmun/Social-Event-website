@@ -27,7 +27,7 @@ const Navbar = () => {
                             {links}
                         </ul>
                     </div>
-                <a className="normal-case text-xl greatVibes">Social Event</a>
+                <a className="normal-case text-xl greatVibes font-semibold">Social Events</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="flex gap-5 menu-horizontal px-1">

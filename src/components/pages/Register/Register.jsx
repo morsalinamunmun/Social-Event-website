@@ -2,10 +2,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Shared/Navbar/Navbar";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
-import { ToastContainer, toast } from 'react-toastify';
+//import { ToastContainer, toast } from 'react-toastify';
 
 const Register = () => {
   const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
   const {createUser} = useContext(AuthContext);
@@ -27,7 +28,7 @@ const Register = () => {
     createUser(email, password)
     .then(result=>{
       console.log(result.user);
-      toast('Registered has been successfully');
+      setSuccess('Register has been successfully')
        navigate(location?.state? location.state: '/login')
     })
     .catch(error=> console.error(error));
@@ -35,6 +36,10 @@ const Register = () => {
   return (
       <div>
             <Navbar></Navbar>
+            
+             {/* <> {
+                success && <p className="text-blue-500 ">{success}</p>
+              }</> */}
             <div className="card flex-shrink-0 w-full max-w-sm my-10 shadow-2xl flex mx-auto bg-base-100">
                 <h2 className="p-5 text-2xl font-bold">Register Now</h2>
               <form className="card-body" onSubmit={handleRegister}>
@@ -67,8 +72,11 @@ const Register = () => {
                     </div>
                     <p className="mt-2">Already have an account? <Link className="text-blue-500 underline ml-2" to='/login'>Login</Link></p>
                 </form>
+                <> {
+                success && <p className="text-blue-500 ">{success}</p>
+              }</>
             </div>
-            <ToastContainer></ToastContainer>
+            {/* <ToastContainer></ToastContainer> */}
       </div>
     );
 };

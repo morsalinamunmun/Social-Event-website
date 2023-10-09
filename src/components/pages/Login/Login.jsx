@@ -3,10 +3,11 @@ import Navbar from "../Shared/Navbar/Navbar";
 import { FcGoogle } from 'react-icons/fc';
 import { useContext, useState } from "react";
 import { AuthContext } from "../../../Providers/AuthProviders";
-import { ToastContainer, toast } from 'react-toastify';
+//import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
   const [loginError, setLoginError] = useState('');
+  const [success, setSuccess] = useState('');
   const navigate = useNavigate();
     const { signIn, googleSignIn} = useContext(AuthContext);
     const handleLogin = e =>{
@@ -21,7 +22,7 @@ const Login = () => {
           console.log(result.user);
           navigate(location?.state? location.state: '/')
           if(result.user.emailVerified){
-             toast('Login has been successfully')
+             setSuccess('Login has been successfully')
           }
         })
         .catch(error=>{
@@ -66,8 +67,11 @@ const Login = () => {
         <p className="mt-2">Do not have an account? <Link className="text-blue-500 underline ml-2" to='/register'>Register</Link></p>
         <p><button onClick={handleGoogleSignIn} className="ml-1 flex items-center text-blue-500 underline"><FcGoogle></FcGoogle>Login With Google</button></p>
       </form>
+      {
+        success && <p>{success}</p>
+      }
     </div>
-    <ToastContainer></ToastContainer>
+    {/* <ToastContainer></ToastContainer> */}
         </div>
     );
 };
