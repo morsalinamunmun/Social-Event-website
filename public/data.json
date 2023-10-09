@@ -1,0 +1,32 @@
+[
+    {
+        "img": "https://i.ibb.co/cK91Zsm/4.jpg",
+        "name": "Jhon Jack",
+        "title": "Manager"
+    },
+    {
+        "img": "https://i.ibb.co/QkDm7bx/3.jpg",
+        "name": "Madil Anu",
+        "title": "Director"
+    },
+    {
+        "img": "https://i.ibb.co/XjtCGfW/2.jpg",
+        "name": "Md.Musfiq",
+        "title": "Excutive Officer"
+    },
+    {
+        "img": "https://i.ibb.co/XjWB9c1/1.jpg",
+        "name": " Ambani",
+        "title": "Managment executive"
+    },
+    {
+        "img": "https://i.ibb.co/3hfz8ym/men-1.webp",
+        "name": "Zucker ",
+        "title": "Designer system"
+    },
+    {
+        "img": "https://i.ibb.co/tx0MMS1/men.jpg",
+        "name": "Muktar Ambani",
+        "title": "Inspector"
+    }
+]

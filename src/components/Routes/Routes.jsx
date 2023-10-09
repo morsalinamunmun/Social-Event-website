@@ -9,6 +9,7 @@ import CardDetails from "../pages/CardDetails/CardDetails";
 import PrivateRoutes from "./PrivateRoutes";
 import Profile from "../pages/Profile/Profile";
 import ErrorPage from "../pages/Shared/ErrorPage/ErrorPage";
+import About from "../pages/About/About";
 
 const router = createBrowserRouter([
     {
@@ -27,8 +28,9 @@ const router = createBrowserRouter([
         },
         {
           path: '/about',
-          element: 
-        }
+          element: <About></About>,
+          loader: ()=> fetch('data.json')
+        },
         {
           path: '/profile',
           element: <PrivateRoutes><Profile></Profile></PrivateRoutes>
